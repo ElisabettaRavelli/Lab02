@@ -1,6 +1,7 @@
 package it.polito.tdp.alien;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
@@ -59,8 +60,10 @@ public class AlienController {
     	
     	if (vett.length == 1 && vett[0].matches("[a-zA-Z]+")) {
     		String parola0 = vett[0].toLowerCase();
-    		String result = dizionario.translateWord(parola0);  //salvo nella stringa result quello 
-    															//che il metodo mi ritorna
+    		//String result = dizionario.translateWord(parola0);  //salvo nella stringa result quello che il metodo mi ritorna
+    		
+    		List<String> result = dizionario.translateWord(parola0); //salvo nella lista result quello che il metodo mi ritorna
+    		
     		if(result == null) {
     			txtResult.appendText("Errore: parola non presente nel dizionario\n");
     			
